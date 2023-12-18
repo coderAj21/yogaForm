@@ -18,7 +18,7 @@ const Admission = ({isUser,setIsUser}) => {
     const sumbitHandler=async (event)=>{
         event.preventDefault();
         try{
-            const data=await axios.post("http://localhost:5500/api/signUp",formData);
+            const data=await axios.post("https://yoga-form-six.vercel.app/api/signUp",formData);
             if (!data?.data?.success){
                 toast.error("Email is already exits!!!! use Different Email...");
                 return;
