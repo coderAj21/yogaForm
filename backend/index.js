@@ -6,7 +6,13 @@ const PORT=process.env.PORT || 4000;
 
 // middlerware
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://yoga-form-six.vercel.app/"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 
 
 
