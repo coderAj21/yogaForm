@@ -10,7 +10,7 @@ const Home = ({isUser,setIsUser}) => {
     }
     async function fetchApi(){
         try{
-            const data=await axios.get("http://localhost:5500/api/fetch");
+            const data=await axios.get("https://yoga-form-six.vercel.app/api/fetch");
             if (data.status===200){
                 setUser(data.data);
                 console.log(user);
