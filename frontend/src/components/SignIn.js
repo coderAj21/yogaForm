@@ -19,7 +19,7 @@ const SignIn = ({isUser,setIsUser}) => {
   async function clickHandler(event){
     event.preventDefault();
     try{
-      const data=await axios.post("http://localhost:5500/api/login",loginData);
+      const data=await axios.post("https://yoga-form-six.vercel.app/api/login",loginData);
       console.log(loginData);
       fetchApi();
     }catch(error){
@@ -28,7 +28,7 @@ const SignIn = ({isUser,setIsUser}) => {
   }
   async function fetchApi(){
     try{
-        const data=await axios.get("http://localhost:5500/api/fetch");
+        const data=await axios.get("https://yoga-form-six.vercel.app/api/fetch");
         console.log(data);
         if(!data.data){setloginData(()=>({...loginData,error:"User is not found..."})); return;}
         navigate("/home");  
